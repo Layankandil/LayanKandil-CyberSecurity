@@ -1,345 +1,369 @@
-<!DOCTYPE html>
-<html lang="en">
+/* CSS Variables */
+:root {
+    --primary-color: #1a1a2e;
+    --secondary-color: #0f1936;
+    --accent-color: #0f3460;
+    --neon-green: #39FF14;
+    --text-color: #e5e5e5;
+    --nav-color: #e5e5e5d7;
+    --font-primary: 'Poppins', sans-serif;
+    --font-mono: 'Roboto Mono', monospace;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layan Kandil | Cybersecurity Student</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<body>
+body {
+    font-family: var(--font-primary);
+    background: linear-gradient(180deg, var(--primary-color), var(--primary-color), var(--secondary-color));
+    color: var(--text-color);
+    line-height: 1.6;
+}
 
-    <nav class="navbar">
-        <div class="nav-container">
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+.navbar {
+    background: rgba(26, 26, 46, 0.6); /* Semi-transparent background */
+    padding: 1rem 0;
+    position: fixed; /* Fix the navbar at the top */
+    width: 100%;
+    z-index: 1000; /* Ensure it stays above other content */
+}
 
-    <header id="about" class="Me">
-        <div class="container">
-            <div class="Me-content">
-                <h1>Layan Kandil</h1>
-                <p class="tagline">Cybersecurity Student & Aspiring Ethical Hacker/Cryptographer</p>
-                <div class="Me-contact">
-                    <div class="contact-item">
-                        <span>
-                            Bachelor’s student in Cybersecurity at the University of Jeddah with a 4.99 GPA. Dedicated
-                            and hardworking, with a strong passion for programming, cryptography and practical
-                            cybersecurity applications.
-                            Committed to delivering tasks with precision and excellence,
-                            excelling in completing projects efficiently, and always eager to tackle new
-                            challenges.</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+.menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--nav-color);
+    cursor: pointer;
+}
 
-    <main>
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
 
-        <section id="education" class="section">
-            <div class="container">
-                <h2 class="section-title">Education</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-header">
-                            <h3>Bachelor of Cybersecurity</h3>
-                            <span class="timeline-date">2022 - 2026 (Expected)</span>
-                        </div>
-                        <p class="timeline-sub">University of Jeddah</p>
-                        <ul class="timeline-details">
-                            <li>Current GPA: 4.99/5.0</li>
-                            <li>Relevant Coursework: Network Security, Secure Programming, Cryptography</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+.nav-links li {
+    margin: 0 1.5rem;
+}
 
-        <section id="certifications" class="section">
-            <div class="container">
-                <h2 class="section-title">Certifications</h2>
-                <div class="certs-grid">
-                    <div class="cert-card">
-                        <i class="fas fa-shield-halved cert-icon"></i>
-                        <ul>
-                            <li>
-                                <h3>ISC2</h3>
-                            </li>
-                            <ul id="ISC2">
-                                <li>Security Principles</li>
-                                <li>Security Operations</li>
-                                <li>Access Control Concepts</li>
-                                <li>Incident Response and Recovery</li>
-                                <li>Security Concepts and Practices</li>
-                                <li>Systems and Application Security</li>
-                                <li>Network and Communications Security</li>
-                            </ul>
-                            <li>
-                                <h3>Cybersecurity– Edraak</h3>
-                            </li>
-                            <li>
-                                <h3>Introduction to Cybersecurity– Great Learning</h3>
-                            </li>
-                            <li>
-                                <h3>Introduction to Cybersecurity Essentials– IBM</h3>
-                            </li>
-                            <li>
-                                <h3>Red Hat System Administration I (RH124)– Red Hat</h3>
-                            </li>
-                            <li>
-                                <h3>Principles of Secure Coding– University of California</h3>
-                            </li>
-                            <li>
-                                <h3>Supply Chain Management Specialization– Rutgers University</h3>
-                            </li>
-                            <li>
-                                <h3>Certificate of Participation, Launchpad Bootcamp– Beyond Company</h3>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+.nav-links a {
+    color: var(--nav-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
 
-        <section id="experience" class="section">
-            <div class="container">
-                <h2 class="section-title">Experience</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-header">
-                            <h3>Cybersecurity Training Program Participant</h3>
-                            <span class="timeline-date">2025</span>
-                        </div>
-                        <p class="timeline-sub">NCA & KAUST</p>
-                        <ul class="timeline-details">
-                            <li>Participated in training to enhance cybersecurity skills and knowledge</li>
-                        </ul>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-header">
-                            <h3>Cybersecurity Academy Member</h3>
-                            <span class="timeline-date">2024 - Present</span>
-                        </div>
-                        <p class="timeline-sub">University of Jeddah</p>
-                        <ul class="timeline-details">
-                            <li>Developed OSINT challenges content and challenges</li>
-                            <li>Participated in a workshop introducing CTF (Capture The Flag) to students</li>
-                        </ul>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-header">
-                            <h3>Cybersecurity Club Member</h3>
-                            <span class="timeline-date">2024 - Present</span>
-                        </div>
-                        <p class="timeline-sub">University of Jeddah</p>
-                        <ul class="timeline-details">
-                            <li>Member of the Activities team</li>
-                        </ul>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-header">
-                            <h3>Electronic Games and Virtual Reality Club Member</h3>
-                            <span class="timeline-date">2024 - Present</span>
-                        </div>
-                        <p class="timeline-sub">University of Jeddah</p>
-                        <ul class="timeline-details">
-                            <li>Part of the content writing team of the club</li>
-                        </ul>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-header">
-                            <h3>Launchpad Bootcamp Participant</h3>
-                            <span class="timeline-date">Sep 2024</span>
-                        </div>
-                        <p class="timeline-sub">Beyond Company</p>
-                        <ul class="timeline-details">
-                            <li>Semi-finalist in tech-business competition</li>
-                            <li>Participated in a training camp focusing on business and technology for students</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+.nav-links a:hover {
+    color: var(--neon-green);
+}
 
-        <section id="skills" class="section">
-            <div class="container">
-                <h2 class="section-title">Technical Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <i class="fas fa-lock skill-icon"></i>
-                        <h3>Cryptography</h3>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fab fa-linux skill-icon"></i>
-                        <h3>Linux System Administration</h3>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fas fa-code skill-icon"></i>
-                        <h3>Secure Programming</h3>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fas fa-network-wired skill-icon"></i>
-                        <h3>Network Security</h3>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fas fa-code skill-icon"></i>
-                        <h3>Web Development</h3>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fas fa-network-wired skill-icon"></i>
-                        <h3>OSINT (Open-Source Intelligence)</h3>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fas fa-network-wired skill-icon"></i>
-                        <h3>Risk Management</h3>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fas fa-envelope skill-icon"></i>
-                        <h3>Project Management</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    transition: transform 0.3s ease;
+}
 
-        <section id="projects" class="section">
-            <div class="container">
-                <h2 class="section-title">Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <h3><i class="fas fa-network-wired project-icon"></i> UJ PathFinder</h3>
-                        <p>UJ PathFinder is an exclusive application for the University of
-                            Jeddah community that revolutionizes the academic journey by providing a centralized
-                            platform for students,
-                            alumni, faculty, and companies. It allows students to manage profiles showcasing their
-                            experiences,
-                            request graduation documents and recommendations, and connect with others while serving as a
-                            bridge to
-                            job opportunities. Companies can view student profiles and engage in training programs,
-                            ensuring a
-                            seamless integration of education and industry. Additionally, the app displays the
-                            employment rate of
-                            graduates, offering insights into alumni success, and mandates that companies allocate at
-                            least 2% of their
-                            workforce for annual student training opportunities, fostering valuable internship
-                            experiences and mutual
-                            growth within the UJ PathFinder platform</p>
-                        <div class="project-links">
-                            <ul>
-                                <li><a href="./projects/CCSW_Project.pdf" class="project-link">
-                                        <i class="fas fa-file-pdf"></i> SE Project PDF
-                                    </a></li>
-                                <li><a href="./projects/CCSW_presentation.pdf" class="project-link">
-                                        <i class="fas fa-presentation"></i> SE Slides
-                                    </a></li>
-                                <li><a href="./projects/UJPathFinder_Report.pdf" class="project-link">
-                                        <i class="fas fa-file-pdf"></i> SPM Project PDF
-                                    </a></li>
-                                <li><a href="./projects/UJPathFinder_Presentation.pdf" class="project-link">
-                                        <i class="fas fa-presentation"></i> SPM Slides
-                                    </a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <h3><i class="fas fa-envelope project-icon"></i> StudyBuds</h3>
-                        <p>Study Buds is an innovative web platform designed to enhance collaborative learning
-                            among students by facilitating the creation and management of study groups. The
-                            platform connects students with shared academic interests, providing an environment
-                            for teamwork, idea exchange, and improved educational outcomes</p>
-                        <div class="project-links">
-                            <ul>
-                                <li><a href="./projects/StudyBuds.pdf" class="project-link">
-                                        <i class="fas fa-file-pdf"></i> Project PDF
-                                    </a></li>
-                                <li><a href="./projects/StudyBuds_Project.zip" class="project-link">
-                                        <i class="fas fa-envelope"></i> Project Folder
-                                    </a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <h3><i class="fas fa-code project-icon"></i> SkillBlend</h3>
-                        <p>SkillBlend is a free consulting and skills exchange platform that connects
-                            individuals seeking to develop skills in their field with volunteering experts. It aims to
-                            remove barriers to
-                            education and promote knowledge sharing, supporting the Vision 2030 initiative for increased
-                            volunteer participation</p>
-                        <div class="project-links">
-                            <ul>
-                                <li><a href="./projects/SkillBlend.pdf" class="project-link">
-                                        <i class="fas fa-file-pdf"></i> Project PDF
-                                    </a></li>
-                                <li><a href="./projects/SkillBlendSQL.text" class="project-link">
-                                        <i class="fas fa-presentation"></i> SQL code
-                                    </a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <h3><i class="fas fa-code project-icon"></i> RideNGo</h3>
-                        <p>RideNGo is designed to enhance the university experience by providing a seamless transport
-                            service for students navigating between campus buildings. With the challenges of long walks
-                            under the sun, RideNGo offers
-                            a reliable and easy way to reserve transportation, ensuring students arrive at their
-                            lectures on time and refreshed</p>
-                        <div class="project-links">
-                            <ul>
-                                <li><a href="./projects/RideNGo_Stage3.pdf" class="project-link">
-                                        <i class="fas fa-file-pdf"></i> Project PDF
-                                    </a></li>
-                                <li><a href="./projects/RindeNGo presentation.pptx" class="project-link">
-                                        <i class="fas fa-presentation"></i> Presentation
-                                    </a></li>
-                                <li><a href="./projects/RideNGo_OOP2.zip" class="project-link">
-                                        <i class="fas fa-envelope"></i> Java Code file
-                                    </a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+.container:hover {
+    transform: translateY(-10px);
+}
 
-    <footer>
-        <div id="contact" class="container">
-            <div class="footer-content">
-                <p class="footer-text">Contact me:</p>
-                <div class="contact-links">
-                    <a href="mailto:Layanhkandil@gmail.com" class="contact-link">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/layan-kandil-a16454181/" class="contact-link">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="tel:+966557859333" class="contact-link">
-                        <i class="fas fa-phone"></i>
-                    </a>
-                </div>
-                <p class="footer-copy">&copy; 2025 Layan Kandil. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-    <script>
-        document.getElementById('menu-icon').addEventListener('click', function () {
-            var navLinks = document.getElementById('nav-links');
-            navLinks.classList.toggle('active'); // Toggle the 'active' class
-        });
-    </script>
-</body>
+.timeline-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
 
-</html>
+.Me {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(180deg, var(--secondary-color), var(--primary-color));
+    text-align: center;
+}
+
+.Me-content h1 {
+    font-size: 4rem;
+    font-family: var(--font-mono);
+    color: var(--neon-green);
+    text-shadow: 0 0 10px rgba(57, 255, 20, 0.3);
+}
+
+.tagline {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    opacity: 0.9;
+}
+
+/* Sections */
+.section {
+    padding: 5rem 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--neon-green);
+    text-align: center;
+    position: relative;
+}
+
+.project-links ul{
+    list-style-type: none;
+}
+
+.project-card h3 {
+    color: var(--neon-green);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background: var(--neon-green);
+}
+
+#ISC2 {
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skill-card, .project-card, .cert-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover, .project-card:hover, .cert-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-icon, .projects-icon {
+    font-size: 2rem;
+    color: var(--neon-green);
+    margin-bottom: 1rem;
+}
+
+/* Timeline */
+.timeline-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.timeline-date {
+    color: var(--neon-green);
+    font-weight: 500;
+}
+
+.project-links li a {
+    color: rgb(97, 192, 247);
+}
+
+.project-links li a:hover {
+    color: var(--neon-green);
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.contact-link {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: var(--neon-green);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background: var(--secondary-color);
+    margin-top: 5rem;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 800px) {
+
+    .nav-links {
+        flex-direction: row;
+        width: 100%;
+        background: rgba(26, 26, 46, 0.9);
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show the nav links when the menu icon is clicked */
+    }
+
+    .menu-icon {
+        display: block; /* Show the menu icon */
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        font-size: 0.8rem; /* Adjusted for better readability */
+        margin: 0.5rem 0;
+    }
+
+    .Me-content h1 {
+        font-size: 2.5rem; /* Slightly smaller */
+    }
+
+    .tagline {
+        font-size: 1rem; /* Adjusted */
+    }
+
+    .section-title {
+        font-size: 1.5rem; /* Adjusted */
+    }
+
+    .skills-grid, .projects-grid {
+        grid-template-columns: 1fr; /* Single column */
+    }
+
+    .container {
+        padding: 0 1rem; /* Maintain some padding */
+    }
+}
+
+@media (max-width: 560px) {
+    /* Global adjustments for very small devices */
+    body {
+        font-size: 12px; /* Reduced base font size for better scaling */
+    }
+
+    .nav-links {
+        font-size: 0.7rem; /* Adjusted for readability */
+    }
+
+    .nav-links li {
+        margin: 0 0.4rem; /* Maintain minimal spacing */
+    }
+
+    .Me-content h1 {
+        font-size: 1.8rem; /* Reduced header size for mobile */
+    }
+
+    .tagline {
+        font-size: 0.9rem; /* Adjusted */
+    }
+
+    .section-title {
+        font-size: 1.2rem; /* Reduced */
+    }
+
+    .timeline-item h3, .cert-card h3, .skill-card h3, .project-card h3 {
+        font-size: 0.7rem; /* Adjusted heading sizes */
+    }
+
+    .timeline-item p, .cert-card ul, .skill-card p, .project-card p, .timeline-details {
+        font-size: 0.5rem; /* Adjusted paragraph sizes */
+    }
+
+    .contact-link {
+        font-size: 0.9rem; /* Adjusted icon sizes in the footer */
+    }
+
+    .container {
+        padding: 0 0.5rem; /* Reduced container padding */
+    }
+
+    .skill-card, .project-card, .cert-card, .timeline-item {
+        padding: 0.5rem; /* Reduced card padding */
+        margin-bottom: 0.5rem; /* Reduced spacing between cards */
+    }
+
+    .skills-grid, .projects-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 0.5rem; /* Reduced gap between grid items */
+    }
+
+    .Me {
+        padding: 1rem 0; /* Reduced padding in the header section */
+    }
+
+    .section {
+        padding: 1rem 0; /* Reduced padding in sections */
+    }
+
+    /* Headings */
+    h1 {
+        font-size: 1.6rem; /* Reduced h1 size */
+    }
+
+    h2 {
+        font-size: 1.2rem; /* Reduced h2 size */
+    }
+
+    .timeline-header h3, .cert-card li h3, .skill-card h3 {
+        font-size: 0.6rem; /* Reduced h3 size */
+    }
+
+    footer {
+        font-size: 0.6rem; /* Adjusted footer font size */
+    }
+
+    /* Links inside list items */
+    li a {
+        font-size: 0.5rem; /* Reduced link size */
+    }
+
+    /* Timeline text */
+    .timeline-item span {
+        font-size: 0.5rem; /* Reduced timeline date size */
+    }
+
+    .timeline-item p {
+        font-size: 0.5rem; /* Reduced timeline paragraph size */
+    }
+
+    /* Span elements */
+    span {
+        font-size: 0.5rem; /* Reduced general span size */
+    }
+
+    .skill-icon {
+        font-size: 1rem; /* Adjusted size for icons */
+    }
+
+    .contact-link {
+        font-size: 0.9rem; /* Adjusted size for icons */
+    }
+}
