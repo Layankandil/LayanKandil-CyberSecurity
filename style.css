@@ -46,7 +46,7 @@ body {
 }
 
 .nav-links li {
-    margin: 0 1rem;
+    margin: 0 1.5rem;
 }
 
 .nav-links a {
@@ -212,12 +212,13 @@ footer {
 
 /* Media Queries for Responsiveness */
 @media (max-width: 800px) {
+
     .nav-links {
         flex-direction: row;
         width: 100%;
         background: rgba(26, 26, 46, 0.9);
         position: absolute;
-        top: 20px;
+        top: 0;
         left: 0;
         font-size: 1rem;
     }
@@ -237,131 +238,133 @@ footer {
     }
 
     .nav-links {
-        font-size: 0.6rem;
+        font-size: 0.9rem; /* Adjusted for better readability */
         margin: 0.5rem 0;
     }
 
     .Me-content h1 {
-        font-size: 3rem;
+        font-size: 2.6rem; /* Slightly smaller */
     }
 
     .tagline {
-        font-size: 1.2rem;
+        font-size: 1.1rem; /* Adjusted */
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 1.6rem; /* Adjusted */
     }
 
     .skills-grid, .projects-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Single column */
     }
 
     .container {
-        padding: 0 1rem;
+        padding: 0 1.1rem; /* Maintain some padding */
     }
 }
 
 @media (max-width: 560px) {
     /* Global adjustments for very small devices */
     body {
-        font-size: 10px; /* Reduce base font size */
+        font-size: 13px; /* Reduced base font size for better scaling */
     }
 
     .nav-links {
-        font-size: 0.4rem;
+        font-size: 0.7rem; /* Adjusted for readability */
     }
 
     .nav-links li {
-        margin: 0 0.4rem;
+        margin: 0 0.4rem; /* Maintain minimal spacing */
     }
 
     .Me-content h1 {
-        font-size: 1rem; /* Reduce the main heading size */
+        font-size: 1.9rem; /* Reduced header size for mobile */
     }
 
     .tagline {
-        font-size: 0.7rem; /* Reduce the tagline size */
+        font-size: 1rem; /* Adjusted */
     }
 
     .section-title {
-        font-size: 1rem; /* Reduce section title size */
+        font-size: 1.3rem; /* Reduced */
     }
 
     .timeline-item h3, .cert-card h3, .skill-card h3, .project-card h3 {
-        font-size: 0.8rem; /* Reduce heading sizes in cards and timeline */
+        font-size: 0.8rem; /* Adjusted heading sizes */
     }
 
-    .timeline-item p, .cert-card ul, .skill-card p, .project-card p , .timeline-details {
-        font-size: 0.4rem; /* Reduce paragraph and list text sizes */
+    .timeline-item p, .cert-card ul, .skill-card p, .project-card p, .timeline-details {
+        font-size: 0.6rem; /* Adjusted paragraph sizes */
     }
 
     .contact-link {
-        font-size: 1rem; /* Reduce icon sizes in the footer */
+        font-size: 1rem; /* Adjusted icon sizes in the footer */
     }
 
     .container {
-        padding: 0 0.5rem; /* Reduce container padding */
+        padding: 0 0.6rem; /* Reduced container padding */
     }
 
     .skill-card, .project-card, .cert-card, .timeline-item {
-        padding: 0.5rem; /* Reduce card padding */
-        margin-bottom: 0.5rem; /* Reduce spacing between cards */
+        padding: 0.6rem; /* Reduced card padding */
+        margin-bottom: 0.6rem; /* Reduced spacing between cards */
     }
 
     .skills-grid, .projects-grid {
-        grid-template-columns: 1fr; /* Ensure single column layout */
-        gap: 0.5rem; /* Reduce gap between grid items */
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 0.6rem; /* Reduced gap between grid items */
     }
 
     .Me {
-        padding: 1rem 0; /* Reduce padding in the header section */
+        padding: 1.1rem 0; /* Reduced padding in the header section */
     }
 
     .section {
-        padding: 1rem 0; /* Reduce padding in sections */
+        padding: 1.1rem 0; /* Reduced padding in sections */
     }
 
     /* Headings */
     h1 {
-        font-size: 1.4rem; /* Reduce h1 size */
+        font-size: 1.7rem; /* Reduced h1 size */
     }
 
     h2 {
-        font-size: 1rem; /* Reduce h2 size */
+        font-size: 1.3rem; /* Reduced h2 size */
     }
 
-    .timeline-header h3 , .cert-card li h3 , .skill-card h3{
-        font-size: 0.5rem; /* Reduce h3 size */
+    .timeline-header h3, .cert-card li h3, .skill-card h3 {
+        font-size: 0.7rem; /* Reduced h3 size */
     }
 
-    footer{
-        font-size: 0.5rem;
+    footer {
+        font-size: 0.5rem; /* Adjusted footer font size */
     }
+
     /* Links inside list items */
     li a {
-        font-size: 0.4rem; /* Reduce link size */
+        font-size: 0.6rem; /* Reduced link size */
     }
 
     /* Timeline text */
     .timeline-item span {
-        font-size: 0.4rem; /* Reduce timeline date size */
+        font-size: 0.6rem; /* Reduced timeline date size */
     }
 
     .timeline-item p {
-        font-size: 0.4rem; /* Reduce timeline paragraph size */
+        font-size: 0.6rem; /* Reduced timeline paragraph size */
     }
 
     /* Span elements */
     span {
-        font-size: 0.4rem; /* Reduce general span size */
+        font-size: 0.6rem; /* Reduced general span size */
     }
 
     .skill-icon {
-        font-size: 0.8rem; /* Smaller size for small devices */
+        font-size: 1.1rem; /* Adjusted size for icons */
     }
 
     .contact-link {
-        font-size: 1rem; /* Smaller size for small devices */
+        font-size: 1rem; /* Adjusted size for icons */
     }
+    
 }
