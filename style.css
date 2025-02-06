@@ -130,8 +130,7 @@ body {
 }
 
 #ISC2 {
-    border-bottom: 2px solid white;
-    padding-bottom: 10px;
+    padding-bottom: 8px;
 }
 
 .skills-grid {
@@ -210,6 +209,13 @@ footer {
     margin-top: 5rem;
 }
 
+.cert-card ul,
+.timeline-details,
+.timeline-item ul {
+    list-style-type: disc; /* Default bullet style */
+    padding-left: 1.5rem; /* Indent the list */
+}
+
 /* Media Queries for Responsiveness */
 @media (max-width: 800px) {
 
@@ -282,23 +288,26 @@ footer {
     }
 
     .tagline {
-        font-size: 1rem; /* Adjusted */
+        font-size: 1.2rem; /* Adjusted */
     }
 
     .section-title {
         font-size: 1.3rem; /* Reduced */
     }
 
-    .timeline-item h3, .cert-card h3, .skill-card h3, .project-card h3 {
-        font-size: 0.8rem; /* Adjusted heading sizes */
+    .timeline-item h3, .skill-card h3, .project-card h3 {
+        font-size: 0.9rem; /* Adjusted heading sizes */
+    }
+    .cert-card h3{
+        font-size: 0.7rem;
     }
 
     .timeline-item p, .cert-card ul, .skill-card p, .project-card p, .timeline-details {
-        font-size: 0.6rem; /* Adjusted paragraph sizes */
+        font-size: 0.7rem; /* Adjusted paragraph sizes */
     }
 
     .contact-link {
-        font-size: 1rem; /* Adjusted icon sizes in the footer */
+        font-size: 1.2rem; /* Adjusted icon sizes in the footer */
     }
 
     .container {
@@ -329,15 +338,16 @@ footer {
     }
 
     h2 {
-        font-size: 1.3rem; /* Reduced h2 size */
+        font-size: 1.5rem; /* Reduced h2 size */
     }
 
-    .timeline-header h3, .cert-card li h3, .skill-card h3 {
-        font-size: 0.7rem; /* Reduced h3 size */
+    .cert-card li,
+    .timeline-details li {
+        position: relative; /* Positioning for custom bullets */
     }
 
     footer {
-        font-size: 0.5rem; /* Adjusted footer font size */
+        font-size: 0.7rem; /* Adjusted footer font size */
     }
 
     /* Links inside list items */
@@ -347,24 +357,24 @@ footer {
 
     /* Timeline text */
     .timeline-item span {
-        font-size: 0.6rem; /* Reduced timeline date size */
+        font-size: 0.7rem; /* Reduced timeline date size */
     }
 
     .timeline-item p {
-        font-size: 0.6rem; /* Reduced timeline paragraph size */
+        font-size: 0.7rem; /* Reduced timeline paragraph size */
     }
 
     /* Span elements */
     span {
-        font-size: 0.6rem; /* Reduced general span size */
+        font-size: 0.7rem; /* Reduced general span size */
     }
 
     .skill-icon {
-        font-size: 1.1rem; /* Adjusted size for icons */
+        font-size: 1.2rem; /* Adjusted size for icons */
     }
 
     .contact-link {
-        font-size: 1rem; /* Adjusted size for icons */
+        font-size: 1.5rem; /* Adjusted size for icons */
     }
     
 }
