@@ -1,0 +1,367 @@
+/* CSS Variables */
+:root {
+    --primary-color: #1a1a2e;
+    --secondary-color: #0f1936;
+    --accent-color: #0f3460;
+    --neon-green: #39FF14;
+    --text-color: #e5e5e5;
+    --nav-color: #e5e5e5d7;
+    --font-primary: 'Poppins', sans-serif;
+    --font-mono: 'Roboto Mono', monospace;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    background: linear-gradient(180deg, var(--primary-color), var(--primary-color), var(--secondary-color));
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.navbar {
+    background: rgba(26, 26, 46, 0.6); /* Semi-transparent background */
+    padding: 1rem 0;
+    position: fixed; /* Fix the navbar at the top */
+    width: 100%;
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--nav-color);
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    color: var(--nav-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--neon-green);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-10px);
+}
+
+.timeline-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.Me {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(180deg, var(--secondary-color), var(--primary-color));
+    text-align: center;
+}
+
+.Me-content h1 {
+    font-size: 4rem;
+    font-family: var(--font-mono);
+    color: var(--neon-green);
+    text-shadow: 0 0 10px rgba(57, 255, 20, 0.3);
+}
+
+.tagline {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    opacity: 0.9;
+}
+
+/* Sections */
+.section {
+    padding: 5rem 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--neon-green);
+    text-align: center;
+    position: relative;
+}
+
+.project-links ul{
+    list-style-type: none;
+}
+
+.project-card h3 {
+    color: var(--neon-green);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background: var(--neon-green);
+}
+
+#ISC2 {
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skill-card, .project-card, .cert-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover, .project-card:hover, .cert-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-icon, .projects-icon {
+    font-size: 2rem;
+    color: var(--neon-green);
+    margin-bottom: 1rem;
+}
+
+/* Timeline */
+.timeline-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.timeline-date {
+    color: var(--neon-green);
+    font-weight: 500;
+}
+
+.project-links li a {
+    color: rgb(97, 192, 247);
+}
+
+.project-links li a:hover {
+    color: var(--neon-green);
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.contact-link {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: var(--neon-green);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background: var(--secondary-color);
+    margin-top: 5rem;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 800px) {
+    .nav-links {
+        flex-direction: row;
+        width: 100%;
+        background: rgba(26, 26, 46, 0.9);
+        position: absolute;
+        top: 20px;
+        left: 0;
+        font-size: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show the nav links when the menu icon is clicked */
+    }
+
+    .menu-icon {
+        display: block; /* Show the menu icon */
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        font-size: 0.6rem;
+        margin: 0.5rem 0;
+    }
+
+    .Me-content h1 {
+        font-size: 3rem;
+    }
+
+    .tagline {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .skills-grid, .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 560px) {
+    /* Global adjustments for very small devices */
+    body {
+        font-size: 10px; /* Reduce base font size */
+    }
+
+    .nav-links {
+        font-size: 0.4rem;
+    }
+
+    .nav-links li {
+        margin: 0 0.4rem;
+    }
+
+    .Me-content h1 {
+        font-size: 1rem; /* Reduce the main heading size */
+    }
+
+    .tagline {
+        font-size: 0.7rem; /* Reduce the tagline size */
+    }
+
+    .section-title {
+        font-size: 1rem; /* Reduce section title size */
+    }
+
+    .timeline-item h3, .cert-card h3, .skill-card h3, .project-card h3 {
+        font-size: 0.8rem; /* Reduce heading sizes in cards and timeline */
+    }
+
+    .timeline-item p, .cert-card ul, .skill-card p, .project-card p , .timeline-details {
+        font-size: 0.4rem; /* Reduce paragraph and list text sizes */
+    }
+
+    .contact-link {
+        font-size: 1rem; /* Reduce icon sizes in the footer */
+    }
+
+    .container {
+        padding: 0 0.5rem; /* Reduce container padding */
+    }
+
+    .skill-card, .project-card, .cert-card, .timeline-item {
+        padding: 0.5rem; /* Reduce card padding */
+        margin-bottom: 0.5rem; /* Reduce spacing between cards */
+    }
+
+    .skills-grid, .projects-grid {
+        grid-template-columns: 1fr; /* Ensure single column layout */
+        gap: 0.5rem; /* Reduce gap between grid items */
+    }
+
+    .Me {
+        padding: 1rem 0; /* Reduce padding in the header section */
+    }
+
+    .section {
+        padding: 1rem 0; /* Reduce padding in sections */
+    }
+
+    /* Headings */
+    h1 {
+        font-size: 1.4rem; /* Reduce h1 size */
+    }
+
+    h2 {
+        font-size: 1rem; /* Reduce h2 size */
+    }
+
+    .timeline-header h3 , .cert-card li h3 , .skill-card h3{
+        font-size: 0.5rem; /* Reduce h3 size */
+    }
+
+    footer{
+        font-size: 0.5rem;
+    }
+    /* Links inside list items */
+    li a {
+        font-size: 0.4rem; /* Reduce link size */
+    }
+
+    /* Timeline text */
+    .timeline-item span {
+        font-size: 0.4rem; /* Reduce timeline date size */
+    }
+
+    .timeline-item p {
+        font-size: 0.4rem; /* Reduce timeline paragraph size */
+    }
+
+    /* Span elements */
+    span {
+        font-size: 0.4rem; /* Reduce general span size */
+    }
+
+    .skill-icon {
+        font-size: 0.8rem; /* Smaller size for small devices */
+    }
+
+    .contact-link {
+        font-size: 1rem; /* Smaller size for small devices */
+    }
+}
