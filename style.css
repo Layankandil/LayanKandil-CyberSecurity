@@ -4,7 +4,7 @@
     --secondary-color: #0f1936;
     --accent-color: #0f3460;
     --neon-green: #39FF14;
-    --text-color: #e5e5e5;
+    --text-color: #dcdcdc;
     --nav-color: #e5e5e5d7;
     --font-primary: 'Poppins', sans-serif;
     --font-mono: 'Roboto Mono', monospace;
@@ -21,7 +21,7 @@ body {
     font-family: var(--font-primary);
     background: linear-gradient(180deg, var(--primary-color), var(--primary-color), var(--secondary-color));
     color: var(--text-color);
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .navbar {
@@ -116,6 +116,7 @@ body {
 
 .project-card h3 {
     color: var(--neon-green);
+    font-size: 1.3rem;
 }
 
 .section-title::after {
@@ -157,10 +158,23 @@ body {
     transform: translateY(-5px);
 }
 
+.cert-card h3{
+    font-size: 1.1rem;
+    font-weight: 610;
+    margin-bottom: 0.15rem;
+}
+
 .skill-icon, .projects-icon {
     font-size: 2rem;
     color: var(--neon-green);
     margin-bottom: 1rem;
+}
+
+.project-card p{
+    border-top: 2px solid var(--text-color);
+    padding-bottom: 8px;
+    padding-top: 8px;
+    margin-top: 8px;
 }
 
 /* Timeline */
@@ -178,11 +192,14 @@ body {
 }
 
 .project-links li a {
-    color: rgb(97, 192, 247);
+    color: rgb(67, 179, 244);
+    text-decoration: none;
+    text-indent: 0.5rem;
 }
 
 .project-links li a:hover {
     color: var(--neon-green);
+    text-decoration: underline;
 }
 
 .contact-links {
@@ -299,7 +316,7 @@ footer {
         font-size: 0.9rem; /* Adjusted heading sizes */
     }
     .cert-card h3{
-        font-size: 0.7rem;
+        font-size: 0.68rem;
     }
 
     .timeline-item p, .cert-card ul, .skill-card p, .project-card p, .timeline-details {
@@ -347,7 +364,7 @@ footer {
     }
 
     footer {
-        font-size: 0.9rem; /* Adjusted footer font size */
+        font-size: 0.8rem; /* Adjusted footer font size */
     }
 
     /* Links inside list items */
@@ -364,17 +381,21 @@ footer {
         font-size: 0.7rem; /* Reduced timeline paragraph size */
     }
 
+    .project-links li a{
+        font-size: 0.65rem;
+    }
+
     /* Span elements */
     span {
         font-size: 0.7rem; /* Reduced general span size */
     }
 
     .skill-icon {
-        font-size: 1.2rem; /* Adjusted size for icons */
+        font-size: 1.1rem; /* Adjusted size for icons */
     }
 
     .contact-link {
-        font-size: 2rem; /* Adjusted size for icons */
+        font-size: 1.9rem; /* Adjusted size for icons */
     }
     
 }
