@@ -15,7 +15,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theStyle.css">
 </head>
 
 <body>
@@ -375,6 +375,41 @@
                     navLinks.classList.remove('active');
                 });
             });
+        });
+
+        let lastScrollY = window.scrollY;
+        const navbar = document.querySelector('.navbar');
+        const scrollThreshold = 5;
+
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+
+            // Scrolling DOWN - Hide navbar
+            if (currentScrollY > lastScrollY + scrollThreshold) {
+                navbar.classList.add('hidden');
+            }
+            // Scrolling UP - Show navbar
+            else if (currentScrollY < lastScrollY - scrollThreshold) {
+                navbar.classList.remove('hidden');
+            }
+
+            // Always show navbar at top
+            if (currentScrollY <= 0) {
+                navbar.classList.remove('hidden');
+            }
+
+            lastScrollY = currentScrollY;
+
+            // Close mobile menu when scrolling
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.remove('active');
+        });
+        let isScrolling;
+        window.addEventListener('scroll', () => {
+            window.clearTimeout(isScrolling);
+            isScrolling = setTimeout(() => {
+                // Your scroll handling code
+            }, 66); // 66ms = ~15fps
         });
     </script>
 </body>
