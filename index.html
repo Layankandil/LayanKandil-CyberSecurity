@@ -5,17 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layan Kandil | Cybersecurity Student</title>
+
+    <!-- Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
     <nav class="navbar">
         <div class="nav-container">
+            <div class="navbar-brand">LK</div>
+            <div class="menu-icon" id="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
             <ul class="nav-links" id="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#education">Education</a></li>
@@ -50,7 +59,7 @@
 
     <main>
 
-        <section id="education" class="section">
+        <section id="education" class="section" data-aos="fade-up" data-aos-duration="3000">
             <div class="container">
                 <h2 class="section-title">Education</h2>
                 <div class="timeline">
@@ -69,7 +78,7 @@
             </div>
         </section>
 
-        <section id="certifications" class="section">
+        <section id="certifications" class="section" data-aos="fade-up" data-aos-duration="3000">
             <div class="container">
                 <h2 class="section-title">Certifications</h2>
                 <div class="certs-grid">
@@ -115,7 +124,7 @@
             </div>
         </section>
 
-        <section id="experience" class="section">
+        <section id="experience" class="section" data-aos="fade-up" data-aos-duration="3000">
             <div class="container">
                 <h2 class="section-title">Experience</h2>
                 <div class="timeline">
@@ -175,7 +184,7 @@
             </div>
         </section>
 
-        <section id="skills" class="section">
+        <section id="skills" class="section" data-aos="fade-up" data-aos-duration="3000">
             <div class="container">
                 <h2 class="section-title">Technical Skills</h2>
                 <div class="skills-grid">
@@ -215,7 +224,7 @@
             </div>
         </section>
 
-        <section id="projects" class="section">
+        <section id="projects" class="section" data-aos="fade-up" data-aos-duration="3000">
             <div class="container">
                 <h2 class="section-title">Projects</h2>
                 <div class="projects-grid">
@@ -316,7 +325,7 @@
     </main>
 
     <footer>
-        <div id="contact" class="container">
+        <div id="contact" class="container" data-aos="fade-up">
             <div class="footer-content">
                 <p class="footer-text">Contact me:</p>
                 <div class="contact-links">
@@ -335,6 +344,39 @@
             </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: false,
+            mirror: true
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuIcon = document.getElementById('menu-icon');
+            const navLinks = document.getElementById('nav-links');
+
+            // Toggle mobile menu
+            menuIcon.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!menuIcon.contains(e.target) && !navLinks.contains(e.target)) {
+                    navLinks.classList.remove('active');
+                }
+            });
+
+            // Close menu when a link is clicked
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
