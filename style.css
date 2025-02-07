@@ -25,14 +25,21 @@ body {
 }
 
 .navbar {
-    background: rgba(18, 22, 33, 0.685);
+    background: rgba(14, 20, 36, 0.712);
     backdrop-filter: blur(10px); /* Standard property */
     -webkit-backdrop-filter: blur(10px); /* Safari 9+ support */
     padding: 1rem 0;
     position: fixed;
     width: 100%;
     z-index: 1000;
+    transition: transform 0.3s ease;
 }
+
+.navbar.hidden {
+    transform: translateY(-100%);
+    box-shadow: none;
+}
+
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -282,6 +289,12 @@ footer {
     padding-left: 1.5rem; /* Indent the list */
 }
 
+@media (hover: none) {
+    .navbar.hidden {
+        transform: translateY(-100%);
+    }
+}
+
 /* Media Queries for Responsiveness */
 @media (max-width: 800px) {
 
@@ -290,7 +303,7 @@ footer {
         top: 60px;
         right: -100%;
         flex-direction: column;
-        background: rgba(18, 22, 33, 0.685);
+        background: rgba(14, 20, 36, 0.712);
         width: 100%;
         text-align: center;
         padding: 2rem 0;
@@ -331,7 +344,7 @@ footer {
         top: 60px;
         right: -100%; /* Hide the menu off-screen by default */
         flex-direction: column;
-        background: rgba(18, 22, 33, 0.791);
+        background: rgba(14, 20, 36, 0.712);
         width: 100%;
         text-align: center;
         padding: 2rem 0;
